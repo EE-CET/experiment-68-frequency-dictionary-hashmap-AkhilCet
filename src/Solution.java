@@ -13,8 +13,11 @@ public class Solution {
                 frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
             }
         }
+        String[] resultParts = new String[frequencyMap.size()];
+        int i = 0;
         for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            resultParts[i++] = entry.getKey() + ": " + entry.getValue();
         }
+        System.out.println(String.join(" ", resultParts));
     }
 }
